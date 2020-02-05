@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title></title>
+</head>
+<style>
+    section {
+        border: 1px solid #ccc;
+        padding: rem;
+    }
+    section:target {
+        background-color: blue;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>list</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#section_ordered">order list</a>
+            </li>
+            <li><a href="#section_unordered">unordered list</a>
+            </li>
+            <li><a href="#section_nav">unordered list inside a nav</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section id="section_ordered"></section>
+        <header>
+            <h2> Ordered list</h2>
+            <li>1.Item</li>
+            <li>2.Item</li>
+            <section id="section_unordered"></section>
+            <h2> Unordered list</h2>
+            <li>1.Item</li>
+            <li>2.Item</li>
+
+            <section id="section_nav"></section>
+            <h2> Unordered list inside a nav</h2>
+            <li>Nav Item</li>
+            <li>Nav Item</li>
+        </header>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
