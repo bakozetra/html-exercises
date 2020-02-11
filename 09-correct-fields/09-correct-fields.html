@@ -1,127 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>
-      09: Choosing the correct field
-    </title>
-    <link rel="stylesheet" href="forms.css">
-  </head>
-  <body>
-    <header>
-      <h1>
-        Choosing the correct field
-      </h1>
-      <p>Please create the right HTML form field(s) for each <code>fieldset</code> below</p>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="#form_text">Text entry</a></li>
-        <li><a href="#form_booleans">Boolean choices</a></li>
-        <li><a href="#form_single">Single choice</a></li>
-        <li><a href="#form_multiple">Multiple choices</a></li>
-        <li><a href="#form_other">Other form fields</a></li>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>
+    09: Choosing the correct field
+  </title>
+  <link rel="stylesheet" href="forms.css">
+</head>
+
+<body>
+  <header>
+    <h1>
+      Choosing the correct field
+    </h1>
+    <p>Please create the right HTML form field(s) for each <code>fieldset</code> below</p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#form_text">Text entry</a></li>
+      <li><a href="#form_booleans">Boolean choices</a></li>
+      <li><a href="#form_single">Single choice</a></li>
+      <li><a href="#form_multiple">Multiple choices</a></li>
+      <li><a href="#form_other">Other form fields</a></li>
+    </ul>
+  </nav>
+  <main>
+    <form action="#form_text" method="GET" id="form_text">
+      <header>
+        <h2>Text entry</h2>
+      </header>
+      <fieldset>
+        <legend>Simple text: Nickname</legend>
+        <input type="text" name="nickname">
+        <!-- The  server is expecting plain text here with the `name` of `nickname`. Linebreaks aren't allowed. -->
+      </fieldset>
+      <fieldset>
+        <legend>Multi-line Text: Biography</legend>
+
+        <input type="text" id="biography" name="biography">
+
+
+        <!-- The server is expecting paragraphs of text here to act as the `biography` field. Linebreaks need to be saved. -->
+      </fieldset>
+      <fieldset>
+        <legend>Mobile phone number</legend>
+
+
+        <input type="tel" id="phone" name="your phone number" required>
+
+
+
+        <!-- The server is expecting the user's `mobile_phone` here. -->
+      </fieldset>
+      <fieldset>
+        <legend>Website</legend>
+
+
+
+        <input type="url" name="url" id="url" required>
+
+
+        <!-- The server is expecting the user's `website` address here. -->
+      </fieldset>
+      <fieldset>
+        <legend>Date of birth</legend>
+
+
+
+        <input type="date " date_date_format="DD MMMM YYYY" name="2020/02/11">
+
+        <!-- The server is expecting the user's `date_of_birth` here. -->
+      </fieldset>
+      <fieldset>
+        <legend>Age</legend>
+        <input type="age" id="age" name="age">
+        <!-- The server is expecting the user's `age` in years here. -->
+      </fieldset>
+      <div>
+        <button type="submit" name="form" value="text">Send</button>
+      </div>
+    </form>
+
+    <form action="#form_booleans" method="GET" id="form_booleans">
+      <header>
+        <h2>Boolean / Binary choices</h2>
+      </header>
+      <fieldset>
+        <legend>True / False, with a default choice</legend>
+        <!-- The server is expecting a choice between `true` and `false` only. Set it to `true` by default. -->
+        <ul>
+          <li>
+            <input type="radio" value="true" checked>True</li>
+
+          <li>
+            <input type="radio" value="false">
+            False</li>
       </ul>
-    </nav>
-    <main>
-      <form action="#form_text" method="GET" id="form_text">
-        <header>
-          <h2>Text entry</h2>
-        </header>
-        <fieldset>
-          <legend>Simple text: Nickname</legend>
-          <!-- The server is expecting plain text here with the `name` of `nickname`. Linebreaks aren't allowed. -->
-        </fieldset>
-        <fieldset>
-          <legend>Multi-line Text: Biography</legend>
-          <!-- The server is expecting paragraphs of text here to act as the `biography` field. Linebreaks need to be saved. -->
-        </fieldset>
-        <fieldset>
-          <legend>Mobile phone number</legend>
-          <!-- The server is expecting the user's `mobile_phone` here. -->
-        </fieldset>
-        <fieldset>
-          <legend>Website</legend>
-          <!-- The server is expecting the user's `website` address here. -->
-        </fieldset>
-        <fieldset>
-          <legend>Date of birth</legend>
-          <!-- The server is expecting the user's `date_of_birth` here. -->
-        </fieldset>
-        <fieldset>
-          <legend>Age</legend>
-          <!-- The server is expecting the user's `age` in years here. -->
-        </fieldset>
-        <div>
-          <button type="submit" name="form" value="text">Send</button>
-        </div>
-      </form>
+      <p>
+        Please select one true
+      </p>
+          <select name="choice_select">
+            <option value="true">true</option>
+            <option value="false">false</option>
+          </select>
 
-      <form action="#form_booleans" method="GET" id="form_booleans">
-        <header>
-          <h2>Boolean / Binary choices</h2>
-        </header>
-        <fieldset>
-          <legend>True / False, with a default choice</legend>
-          <!-- The server is expecting a choice between `true` and `false` only. Set it to `true` by default. -->
         </fieldset>
-        <fieldset>
-          <legend>Confirm</legend>
-          <!-- The server is expecting a specific name/value pair of `confirm=true` that the user can confirm, or nothing in its place. -->
-          <input type="checkbox" name="confirm" value="true">
-        </fieldset>
-        <fieldset>
-          <legend>Yes or No</legend>
-          <!-- The server is expecting a value of `yes`, or `no` for the `agree` field. -->
-        </fieldset>
-        <div>
-          <button type="submit" name="form" value="booleans">Send</button>
-        </div>
-      </form>
+      <fieldset>
+        <legend>Confirm</legend>
+        <!-- The server is expecting a specific name/value pair of `confirm=true` that the user can confirm, or nothing in its place. -->
+        <input type="checkbox" name="confirm" value="true" required>confirm
 
-      <form action="#form_single" method="GET" id="form_single">
-        <header>
-          <h2>Single choice from a set of options</h2>
-        </header>
-        <fieldset>
-          <legend>Small list of values</legend>
-          <!--
+      </fieldset>
+      <fieldset>
+        <legend>Yes or No</legend>
+
+        <!-- The server is expecting a value of `yes`, or `no` for the `agree` field. -->
+        <ul>
+          <li>
+            <label>
+              <input type="radio" name="agree" value="yes" required>Yes
+            </label>
+          </li>
+          <li><label>
+              <input type="radio" name="agree" value="no" required>No
+            </label></li>
+
+
+        </ul>
+      </fieldset>
+      <button type="submit" name="form" value="booleans">Send</button>
+
+
+
+    </form>
+
+    <form action="#form_single" method="GET" id="form_single">
+      <header>
+        <h2>Single choice from a set of options</h2>
+      </header>
+      <fieldset>
+        <legend>Small list of values</legend>
+        <!--
             The server is expecting one of the following values for `fruit`:
 
               - `apples`: Apples
-              - `bananas`: Bananas
+             - `bananas`: Bananas
               - `grapes`: Grapes
               - `plums`: Plums
           -->
-        </fieldset>
-        <fieldset>
-          <legend>Large list of values</legend>
-          <!--
+        <ul>
+          <li>
+            <label>
+              <input type="radio" name="fruit" value="apples">Apples
+            </label>
+          </li>
+          <li><label>
+              <input type="radio" name="fruit" value="bananas">Bananas
+            </label>
+          </li>
+          <li><label>
+              <input type="radio" name="fruit" value="grapes">grapes
+            </label> </li>
+          <li> <label>
+              <input type="radio" name="fruit" value="plums">Plums
+            </label> </li>
+
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Large list of values</legend>
+        <!--
             The server is expecting one of the following values for `birds`:
 
               - `duck`: Ducks
               - `eagle`: Eagles
-              - `heron`: Herons
+              - `eagle`: Herons
               - `gull`: Gulls
               - `pigeon`: Pigeons
               - `raven`: Ravens
               - `robin`: Robins
               - `swallow`: Swallows
           -->
-        </fieldset>
-        <div>
-          <button type="submit" name="form" value="single">Send</button>
-        </div>
-      </form>
+        <ul>
+          <li>
+            <input type="radio" name="birds" value="duck">Duck
+          </li>
+          <li>
+            <input type="radio" name="birds" value="eagle">Eagle
+          </li>
+          <li>
+            <input type="radio" name="birds" value="eagle">Eagle
+          </li>
+          <li>
+            <input type="radio" name="birds" value="gull">Gull
+          </li>
+          <li>
+            <input type="radio" name="birds" value="pigeon">Pigeon
+          </li>
+          <li>
+            <input type="radio" name="birds" value="raven">Raven
+          </li>
+          <li>
+            <input type="radio" name="birds" value="robin">Robin
+          </li>
+          <li>
+            <input type="radio" name="birds" value="swallow">Swallow
+          </li>
 
-      <form action="#form_multiple" method="GET" id="form_multiple">
-        <header>
-          <h2>Multiple choices from a set of options</h2>
-        </header>
-        <fieldset>
-          <legend>Small list of values</legend>
-          <!--
+        </ul>
+
+      </fieldset>
+      <div>
+        <button type="submit" name="form" value="single">Send</button>
+      </div>
+    </form>
+
+    <form action="#form_multiple" method="GET" id="form_multiple">
+      <header>
+        <h2>Multiple choices from a set of options</h2>
+      </header>
+      <fieldset>
+        <legend>Small list of values</legend>
+        <!--
             The server is expecting one or more of the following values for `fruit`:
 
               - `apples`: Apples
@@ -129,10 +231,26 @@
               - `grapes`: Grapes
               - `plums`: Plums
           -->
-        </fieldset>
-        <fieldset>
-          <legend>Large list of values</legend>
-          <!--
+        <ul>
+          <li>
+            <label>
+              <input type="checkbox" name="fruit" value="apples">Apples
+            </label> </li>
+          <li> <label>
+              <input type="checkbox" name="fruit" value="bananas">Bananas
+            </label> </li>
+          <li> <label>
+              <input type="checkbox" name="fruit" value="grapes">grapes
+            </label> </li>
+          <li> <label>
+              <input type="checkbox" name="fruit" value="plums">Plums
+            </label> </li>
+
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Large list of values</legend>
+        <!--
             The server is expecting one or more of the following values for `birds`:
 
               - `duck`: Ducks
@@ -144,44 +262,84 @@
               - `robin`: Robins
               - `swallow`: Swallows
           -->
-        </fieldset>
-        <div>
-          <button type="submit" name="form" value="multiple">Send</button>
-        </div>
-      </form>
+        <ul>
 
-      <form action="#form_other" method="GET" id="form_other" enctype="multipart/form-data">
-        <header>
-          <h2>Other form fields</h2>
-        </header>
-        <fieldset>
-          <legend>Hidden</legend>
-          <!--
+          <li> <label>
+              <input type="checkbox" name="birds" value="duck">Duck
+            </label> </li>
+          <li> <label>
+              <input type="checkbox" name="birds" value="eagle">Eagle
+            </label> </li>
+          <li><label>
+              <input type="checkbox" name="birds" value="eagle">Eagle
+            </label> </li>
+          <li><label>
+              <input type="checkbox" name="birds" value="gull">Gull
+            </label></li>
+          <li><label>
+              <input type="checkbox" name="birds" value="pigeon">Pigeon
+            </label> </li>
+          <li><label>
+              <input type="checkbox" name="birds" value="raven">Raven
+            </label></li>
+          <li><label>
+              <input type="checkbox" name="birds" value="robin">Robin
+            </label></li>
+          <li><label>
+              <input type="checkbox" name="birds" value="swallow">Swallow
+            </label></li>
+
+        </ul>
+      </fieldset>
+      <div>
+        <button type="submit" name="form" value="multiple">Send</button>
+      </div>
+    </form>
+
+    <form action="#form_other" method="GET" id="form_other" enctype="multipart/form-data">
+      <header>
+        <h2>Other form fields</h2>
+      </header>
+      <fieldset>
+        <legend>Hidden</legend>
+        <!--
             The server is expecting a hidden `signed=true` pair here.
           -->
-        </fieldset>
-        <fieldset>
-          <legend>File(s)</legend>
-          <!--
+        <label> <input id="signed" name="signed" type="hidden" value="true"></label>
+
+      </fieldset>
+      <fieldset>
+        <legend>File(s)</legend>
+        <!--
             The server is expecting at least one file here, with the name of `photos`.
           -->
-        </fieldset>
-        <fieldset>
-          <legend>Range</legend>
-          <!--
+        <label><input type="file" name="photos"></label>
+
+
+      </fieldset>
+      <fieldset>
+        <legend>Range</legend>
+        <!--
             The server is expecting at a numerical value for `bearing` between 0 and 359
           -->
-        </fieldset>
-        <fieldset>
-          <legend>Colour</legend>
-          <!--
+        <label><input type="range" name="bearing" min="0" max="359" step="60"></label>
+
+      </fieldset>
+      <fieldset>
+        <legend>Colour</legend>
+        <input type="color" name="background_colour">
+        <!--
             The server is expecting at a colour value for `background_colour`
           -->
-        </fieldset>
-        <div>
-          <button type="submit" name="form" value="other">Send</button>
-        </div>
-      </form>
-    </main>
-  </body>
+      
+
+
+      </fieldset>
+      <div>
+        <button type="submit" name="form" value="other">Send</button>
+      </div>
+    </form>
+  </main>
+</body>
+
 </html>
