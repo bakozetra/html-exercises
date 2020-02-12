@@ -1,22 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>
-      10: Form to Google Sheets
-    </title>
-  </head>
-  <body>
 
-    <form action="https://script.google.com/macros/s/AKfycbx_k22UijbL8nV_HE_eFCqonZ5LtCmyZqLd_wvG3_lWoAdLGWI/exec" method="POST">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>
+    10: Form to Google Sheets
+  </title>
+</head>
 
-      <!--
+<body>
+
+  <form action="https://script.google.com/macros/s/AKfycbx_k22UijbL8nV_HE_eFCqonZ5LtCmyZqLd_wvG3_lWoAdLGWI/exec"
+    method="POST">
+
+    <!--
         The google sheet can be found at: https://docs.google.com/spreadsheets/d/1Vnkb5rE1kgXFMt2So3RwfvfLwayVtATt1o9NM-ry9UI/edit?usp=sharing
         Create a field for each cell in the Google Sheet.
       -->
+    <fieldset>
+      <legend>Contributor</legend>
+      <label><input type="text" name="contributor" value="Synthia"></label>
+    </fieldset>
+    <fieldset>
+      <legend>artist-name</legend>
+      <label><input type="text" name="artist_name" value="Black-nadia" required></label>
+    </fieldset>
+    <fieldset>
+      <legend>artist.id</legend>
+      <label><input type="text" name="artist_id" value="black-nadia" required></label>
+    </fieldset>
+    <fieldset>
+      <legend>Genre</legend>
 
-      <button type="submit">Save</button>
-    </form>
-  </body>
+      <ul>
+        <li>
+          <label>
+            <input type="radio" name="genre" value="tsapiky">Tsapiky
+          </label>
+        </li>
+        <li><label>
+            <input type="radio" name="genre" value="kilalaka">Kilalaka
+          </label>
+        </li>
+        <li><label>
+            <input type="radio" name="genre" value="salegy">Salegy
+          </label> </li>
+        <li> <label>
+            <input type="radio" name="genre" value="pop">Pop
+          </label> </li>
+        <li> <label>
+            <input type="radio" name="genre" value="kawitry">Kawitry
+          </label> </li>
+        <li> <label>
+            <input type="radio" name="genre" value="slow">Slow
+          </label> </li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>Photo URL</legend>
+      <label><input type="text" id="photo-url" name="photo_url"></label>
+    </fieldset>
+    <fieldset>
+      <legend>Artist's Website</legend>
+      <label><input type="text" name="astist_website"
+          value="https://web.facebook.com/pages/category/Artist/Black-Nadia-Officiel-1677944949155672/?_rdc=1&_rdr"></label>
+    </fieldset>
+    <fieldset>
+      <legend>Biography</legend>
+      <label><input type="text" id="biography" name="biography"
+          value="Black Nadia (Kantoniaina Ornella Edith Nadia) is a singer-songwriter from south Amboasary, near Fort Dauphin who also lived in the Tulear region "></label>
+    </fieldset>
+    <button type="submit">Save</button>
+  </form>
+</body>
+
 </html>
