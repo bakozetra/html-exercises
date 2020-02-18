@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>
-      13: Semantic HTML
-    </title>
-  </head>
-  <body>
-    <header>
-      <h1>
-        Semantic HTML
-      </h1>
-    </header>
-    <main>
 
-      <section>
-        <h2>A menu of a list of links</h2>
-        <!--
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>
+    13: Semantic HTML
+  </title>
+</head>
+
+<body>
+  <header>
+    <h1>
+      Semantic HTML
+    </h1>
+  </header>
+  <main>
+
+    <section>
+      <h2>A menu of a list of links</h2>
+      <!--
           1. Create a list of links to form a navigational element. The links are:
             - "Home" links to "/"
             - "Our services" links to "/services"
             - "About us" links to "/about"
             - "Contact us" links to "/contact"
         -->
-      </section>
+      <ul>
+        <li>
+          <a href="https://home.com/html">Home</a>
+        </li>
+        <li>
+          <a href="https://services.com/html">Our services</a>
+        </li>
+        <li>
+          <a href="https://contact.com/html">contact us</a>
+        </li>
+      </ul>
+    </section>
 
-      <section>
-        <h2>A profile update form</h2>
-        <!--
+    <section>
+      <h2>A profile update form</h2>
+      <!--
           2. Build a form that posts to "/profile/save". In this form we want the user to be able to update their profile, the form needs the following…
 
           The user's:
@@ -41,11 +54,47 @@
               - Prefer to not disclose, "na"
             - Photo, optional, as "profile_photo". The user can upload a photo if they want. We only accept PNGs, JPGs, and WebP formats.
         -->
-      </section>
+      <fieldset>
+        <legend>First name</legend>
+        <input type="text" name="profile_first_name" required>
+      </fieldset>
+      <fieldset>
+        <legend>Family name </legend>
+        <input type="text" name="profile_family_name" required>
+      </fieldset>
+      <fieldset>
+        <legend>Email</legend>
+        <input type="text" name="username" required>
+      </fieldset>
+      <fieldset>
+        <legend>Phone number</legend>
+        <input type="text" name="phone">
+      </fieldset>
+      <fieldset>
+        <legend>Gender</legend>
+      </fieldset>
+        <ul>
+          <li>
+            <label>
+              <input type="radio" name="gender" value="m">Male
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="gender" value="f">female
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="gender" value="na">Not disclose
+            </label>
+          </li>
+        </ul>
+    </section>
 
-      <section>
-        <h2>An excerpt</h2>
-        <!--
+    <section>
+      <h2>An excerpt</h2>
+      <!--
           3. This excerpt is from a short story called "The story of your life" by "Ted Chiang". Supply the attribution to the author and their title, then mark-up the following excerpt correctly:
 
           "The only reason you had me was so you could get a maid you wouldn't have to pay," you'll say bitterly, dragging the vacuum cleaner out of the closet.
@@ -54,11 +103,59 @@
 
           "If you weren't my mother, this would be illegal," you'll say, seething as you unwind the power cord and plug it into the wall outlet.
         -->
-      </section>
+      <p>
+        This excerpt is from a short story called <q><b>The story of your life</b></q> by <em>"Ted Chiang"</em>. Supply
+        the attribution to the author and their title, then mark-up the following excerpt correctly:
+      </p>
+      <p>
+        <q><em>The only reason you had me was so you could get a maid you wouldn't have to pay,</em></q> you'll say
+        bitterly, <strong>dragging </strong>the vacuum cleaner out of the closet.
+      </p>
+      <p>
+        <code>"That's right!"</code> I'll say. "<mark>Thirteen years ago</mark> I knew the carpets would need vacuuming
+        around now, and having a baby seemed to be the<u> cheapest</u> and<u> easiest</u> way to get the job done. Now
+        kindly get on with it."
+      </p>
+      <p>
+        <em>"If you weren't my mother</em>, <strong> would be illegal</strong>, you'll say, seething as you unwind the
+        power cord and plug it into the wall outlet.
+      </p>
 
-      <section>
-        <h2>A table</h2>
-        <!--
+    </section>
+
+
+    <section>
+      <h2>A table</h2>
+        <table>
+          <caption hidden>a summary of the student's information</caption>
+
+          <thead>
+            <tr>
+              <th scope="col" id="header_name">Name</th>
+              <th scope="col" id="header_age">Age</th>
+              <th scope="col" id="header_weight">Weight</th>
+              <th scope="col" id="header_height">Height</th>
+            </tr></thead>
+            <tbody>
+              <tr>
+                <th headers="header_name" scope="row" id="row_fred">Fred</th>
+                <td headers="row_fred header_age">23</td>
+                <td headers="row_fred header_weight">74kg</td>
+                <td headers="row_fred header_height">182cm</td>
+              </tr>
+              <tr>
+                <th headers="header_name" scope="row" id="row_anne">Anne</th>
+                <td headers="row_anne header_age">26</td>
+                <td headers="row_anne header_weight">56Kg</td>
+                <td headers="row_anne header_height">173cm</td>
+              </tr>
+              <tr>
+                <th headers="header_name" scope="row" id="row_judith">Judith</th>
+                <td headers="row_judith header_age">19</td>
+                <td headers="row_judith header_weight">51Kg</td>
+                <td headers="row_judith header_height">168cm</td>
+            </tbody>
+            <!--
           4. We need a table, with the following column headers:
 
             - Name
@@ -74,11 +171,16 @@
 
           Please provide a summary of the student's information.
         -->
-      </section>
 
-      <section>
-        <h2>Search results</h2>
-        <!--
+
+        </table>
+    </section>
+
+    <section>
+      <h2>Search results</h2><a href="search-result.html">search result</a>
+
+
+      <!--
           5. Create a search results page in this folder and link to it from here.
 
           In this new page you create…
@@ -103,24 +205,51 @@
 
             Title: "Wikipedia: Critical Thinking"
             URL: https://en.wikipedia.org/wiki/Critical_thinking
-            Excerpt:
-              According to Ennis, “Critical thinking is the intellectually disciplined process of actively and skillfully conceptualizing, applying, analyzing, synthesizing, and/or evaluating information gathered from, or generated by, observation, experience, reflection, reasoning, or communication, as a guide to belief and action.
+            iExcerpt:
+              According to Ennis, “Critical thinking is the ntellectually disciplined process of actively and skillfully conceptualizing, applying, analyzing, synthesizing, and/or evaluating information gathered from, or generated by, observation, experience, reflection, reasoning, or communication, as a guide to belief and action.
 
             Title: "Critical Thinking | SkillsYouNeed"
             URL: https://www.skillsyouneed.com/learn/critical-thinking.html
             Excerpt:
               Develop your critical thinking skills. Boost your ability to solve problems and make the right decisions at work, home and in study.
         -->
-      </section>
-      <section>
-        <h2>A definition</h2>
-        <!--
+    </section>
+    <section>
+      <h2>
+        A definition
+      </h2>
+
+      <b>markup<br></b>
+      <small>/ˈmɑːkʌp/</small>
+     <p>
+       <i>noun<br></i>
+     </p>
+      <p>
+        noun: <i>markup;</i> plurale noun:<i>markup;</i>noun:<i>mark-up;</i>plurale noun:<i>mark-ups</i>
+
+      </p>
+      <ol>
+        <li>
+          <b>the amount added to the cost price of goods to cover overheads and profit.<br></b>
+         <q>a markup of 50 per cent</q>
+        </li>
+        <li>
+          <b>the prosses or result of correcting text in preparion for priting.</b>
+        </li>
+        <li>
+          <kbd>COMPUTING<br></kbd>
+          <b>a set of tags assigned to elements of a text to indicate their relation to the rest of the text or dictate how they should be displayed.<br></b>
+          <q>markup languages</q>
+        </li>
+     </ol>
+      <!--
           6. Create the HTML necessary for the image `markup.png` in this folder.
           It is a definition of the word 'Markup'.
         -->
-        <img src="markup.png" alt="There are three definitions for the word 'Markup'">
-      </section>
 
-    </main>
-  </body>
+    </section>
+
+  </main>
+</body>
+
 </html>
