@@ -16,7 +16,6 @@
     </h1>
   </header>
   <main>
-
     <section>
       <h2>A menu of a list of links</h2>
       <!--
@@ -26,19 +25,20 @@
             - "About us" links to "/about"
             - "Contact us" links to "/contact"
         -->
-      <ul>
-        <li>
-          <a href="https://home.com/html">Home</a>
-        </li>
-        <li>
-          <a href="https://services.com/html">Our services</a>
-        </li>
-        <li>
-          <a href="https://contact.com/html">contact us</a>
-        </li>
-      </ul>
+      <nav>
+        <ul>
+          <li>
+            <a href="..//home.com/html">Home</a>
+          </li>
+          <li>
+            <a href="..//services.com/html">Our services</a>
+          </li>
+          <li>
+            <a href="..//contact.com/html">contact us</a>
+          </li>
+        </ul>
+      </nav>
     </section>
-
     <section>
       <h2>A profile update form</h2>
       <!--
@@ -64,34 +64,42 @@
       </fieldset>
       <fieldset>
         <legend>Email</legend>
-        <input type="text" name="username" required>
+        <input type="email" name="username" required>
       </fieldset>
       <fieldset>
         <legend>Phone number</legend>
-        <input type="text" name="phone">
+        <input type="tel" name="phone">
       </fieldset>
       <fieldset>
         <legend>Gender</legend>
+        <nav>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="gender" value="m">Male
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="gender" value="f">female
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="gender" value="na">Not disclose
+              </label>
+            </li>
+          </ul>
+        </nav>
       </fieldset>
-        <ul>
-          <li>
-            <label>
-              <input type="radio" name="gender" value="m">Male
-            </label>
-          </li>
-          <li>
-            <label>
-              <input type="radio" name="gender" value="f">female
-            </label>
-          </li>
-          <li>
-            <label>
-              <input type="radio" name="gender" value="na">Not disclose
-            </label>
-          </li>
-        </ul>
+      <fieldset>
+        <legend>Photo</legend>
+        <p>
+          <label for="photo">Photo (Optional)<br></label>
+          <input type="file" id="photo" name="profile_photo" accept="image/png,image/jpeg,image/webp">
+        </p>
+      </fieldset>
     </section>
-
     <section>
       <h2>An excerpt</h2>
       <!--
@@ -103,59 +111,59 @@
 
           "If you weren't my mother, this would be illegal," you'll say, seething as you unwind the power cord and plug it into the wall outlet.
         -->
-      <p>
-        This excerpt is from a short story called <q><b>The story of your life</b></q> by <em>"Ted Chiang"</em>. Supply
-        the attribution to the author and their title, then mark-up the following excerpt correctly:
-      </p>
-      <p>
-        <q><em>The only reason you had me was so you could get a maid you wouldn't have to pay,</em></q> you'll say
-        bitterly, <strong>dragging </strong>the vacuum cleaner out of the closet.
-      </p>
-      <p>
-        <code>"That's right!"</code> I'll say. "<mark>Thirteen years ago</mark> I knew the carpets would need vacuuming
-        around now, and having a baby seemed to be the<u> cheapest</u> and<u> easiest</u> way to get the job done. Now
-        kindly get on with it."
-      </p>
-      <p>
-        <em>"If you weren't my mother</em>, <strong> would be illegal</strong>, you'll say, seething as you unwind the
-        power cord and plug it into the wall outlet.
-      </p>
-
+      <blockquote>
+        <p>
+          <q>The only reason you had me was so you could get a maid you wouldn't have to pay,</q> you'll say
+          bitterly, dragging the vacuum cleaner out of the closet.
+        </p>
+        <p>
+          <q>"That's right!"</q> I'll say. <q>Thirteen years ago I knew the carpets would need vacuuming
+            around now, and having a baby seemed to be the cheapest and easiest way to get the job done. Now
+            kindly get on with it.</q>
+        </p>
+        <p>
+          <q>"If you weren't my mothe, would be illegal</q>, you'll say, seething as you unwind the
+          power cord and plug it into the wall outlet.
+        </p>
+        <footer>
+          <P> This excerpt is from a short story called <q>The story of your life</q> by <b>Ted Chiang</b>
+          </P>
+        </footer>
+      </blockquote>
     </section>
-
-
     <section>
       <h2>A table</h2>
-        <table>
-          <caption hidden>a summary of the student's information</caption>
+      <table>
+        <caption hidden>a summary of the student's information</caption>
 
-          <thead>
-            <tr>
-              <th scope="col" id="header_name">Name</th>
-              <th scope="col" id="header_age">Age</th>
-              <th scope="col" id="header_weight">Weight</th>
-              <th scope="col" id="header_height">Height</th>
-            </tr></thead>
-            <tbody>
-              <tr>
-                <th headers="header_name" scope="row" id="row_fred">Fred</th>
-                <td headers="row_fred header_age">23</td>
-                <td headers="row_fred header_weight">74kg</td>
-                <td headers="row_fred header_height">182cm</td>
-              </tr>
-              <tr>
-                <th headers="header_name" scope="row" id="row_anne">Anne</th>
-                <td headers="row_anne header_age">26</td>
-                <td headers="row_anne header_weight">56Kg</td>
-                <td headers="row_anne header_height">173cm</td>
-              </tr>
-              <tr>
-                <th headers="header_name" scope="row" id="row_judith">Judith</th>
-                <td headers="row_judith header_age">19</td>
-                <td headers="row_judith header_weight">51Kg</td>
-                <td headers="row_judith header_height">168cm</td>
-            </tbody>
-            <!--
+        <thead>
+          <tr>
+            <th scope="col" id="header_name">Name</th>
+            <th scope="col" id="header_age">Age</th>
+            <th scope="col" id="header_weight">Weight</th>
+            <th scope="col" id="header_height">Height</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th headers="header_name" scope="row" id="row_fred">Fred</th>
+            <td headers="row_fred header_age">23</td>
+            <td headers="row_fred header_weight">74kg</td>
+            <td headers="row_fred header_height">182cm</td>
+          </tr>
+          <tr>
+            <th headers="header_name" scope="row" id="row_anne">Anne</th>
+            <td headers="row_anne header_age">26</td>
+            <td headers="row_anne header_weight">56Kg</td>
+            <td headers="row_anne header_height">173cm</td>
+          </tr>
+          <tr>
+            <th headers="header_name" scope="row" id="row_judith">Judith</th>
+            <td headers="row_judith header_age">19</td>
+            <td headers="row_judith header_weight">51Kg</td>
+            <td headers="row_judith header_height">168cm</td>
+        </tbody>
+        <!--
           4. We need a table, with the following column headers:
 
             - Name
@@ -171,15 +179,10 @@
 
           Please provide a summary of the student's information.
         -->
-
-
-        </table>
+      </table>
     </section>
-
     <section>
       <h2>Search results</h2><a href="search-result.html">search result</a>
-
-
       <!--
           5. Create a search results page in this folder and link to it from here.
 
@@ -218,37 +221,34 @@
       <h2>
         A definition
       </h2>
-
       <b>markup<br></b>
       <small>/ˈmɑːkʌp/</small>
-     <p>
-       <i>noun<br></i>
-     </p>
       <p>
-        noun: <i>markup;</i> plurale noun:<i>markup;</i>noun:<i>mark-up;</i>plurale noun:<i>mark-ups</i>
-
+        <i>noun<br></i>
+      </p>
+      <p>
+        noun: <b>markup;</b> plurale noun:<b>markup;</b>noun:<b>mark-up;</b>plurale noun:<b>mark-ups</b>
       </p>
       <ol>
         <li>
           <b>the amount added to the cost price of goods to cover overheads and profit.<br></b>
-         <q>a markup of 50 per cent</q>
+          <q>a markup of 50 per cent</q>
         </li>
         <li>
           <b>the prosses or result of correcting text in preparion for priting.</b>
         </li>
         <li>
-          <kbd>COMPUTING<br></kbd>
-          <b>a set of tags assigned to elements of a text to indicate their relation to the rest of the text or dictate how they should be displayed.<br></b>
+          <span>COMPUTING<br></span>
+          <b>a set of tags assigned to elements of a text to indicate their relation to the rest of the text or dictate
+            how they should be displayed.<br></b>
           <q>markup languages</q>
         </li>
-     </ol>
+      </ol>
       <!--
           6. Create the HTML necessary for the image `markup.png` in this folder.
           It is a definition of the word 'Markup'.
         -->
-
     </section>
-
   </main>
 </body>
 
