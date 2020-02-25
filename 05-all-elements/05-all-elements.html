@@ -15,7 +15,7 @@
 
     <dl>
       <!-- Let's start with the first element, alphabetically. -->
-      <<
+      <dt class="definition">
         <code>&lt;a&gt;</code>
       </dt>
       <dd>
@@ -28,13 +28,21 @@
       </dd>
 
       <!-- This <abbrentry is missing some text -->
-      <<
+      <dt class="definition">
         <code>&lt;abbr&gt;</code>
       </dt>
       <dd>
         <p>
           The abbrentry element(<code>&lt;abbr&gt;</code>) is used along with a title attribute to associate a full-text
-            explanation with an abbreviation or acronym.
+          explanation with an abbreviation or acronym.
+      <dt class="definition">
+
+        <code>&lt;address&gt;</code>
+      </dt>
+      <dd>
+        <p>
+          The address element(<code>&lt;address&gt;</code>) represents the contact information for its nearest article
+          or body element ancestor
         </p>
       </dd>
       <!-- Add the next element here as a <dt> & <dd> pair -->
@@ -59,21 +67,30 @@
         </p>
       </dd>
       <dt class="definition">
+        <code>&lt;audio&gt;</code>
+      </dt>
+      <dd>
+        <p>
+          An audio element (<code>&lt;audio&gt;</code>)represents a sound or audio stream
+        </p>
+      </dd>
+      <dt class="definition">
         <code>&lt;b&gt;</code>
       </dt>
       <dd>
         <p>
           the b(<code>&lt;b&gt;</code>) is used to draw the reader's attention to the element's contents, which are
-          not otherwise granted special importance.
         </p>
       </dd>
       <dt class="definition">
-        <code>&lt;body&gt;</code>
+        <code>&lt;blockquote&gt;</code>
       </dt>
       <dd>
         <p>
-          The body Element(<code>&lt;body&gt;</code>) represents the content of an HTML document. There can be only one
-          element in a document.
+          The blockquote element(<code>&lt;blockquote&gt;</code>) represents content that is quoted from another source,
+          optionally with a citation which must be within a footer or cite element, and optionally with in-line changes
+          such as annotations and abbreviations.
+        </p>
       </dd>
       <dt class="definition">
         <code>&lt;br&gt;</code>
@@ -91,6 +108,45 @@
           The button element(<code>&lt;button&gt;</code>) represents a button. If the element is not disabled, then the
           user agent should allow the user to activate the
         </p>
+
+
+      <dt class="definition">
+        <code>&lt;canvas&gt;</code>
+      </dt>
+      <dd>
+        <p>
+          The canvas element(<code>&lt;canvas&gt;</code>) provides scripts with a resolution-dependent bitmap canvas,
+          which can be used for rendering graphs, game graphics, art, or other visual images on the fly.
+        </p>
+      </dd>
+      <dt class="definition">
+        <code>&lt;caption&gt;</code>
+      </dt>
+      <dd>
+        <p>
+          The caption element(<code>&lt;caption&gt;</code>) represents the title of the table that is its parent, if it
+          has a parent and that is a table element
+        </p>
+      </dd>
+      <dt class="definition">
+        <code>&lt;cite&gt;</code>
+      </dt>
+      <dd>
+        <p>
+          The cite element(<code>&lt;cite&gt;</code>) represents a reference to a creative work. It must include the
+          title of the work or the name of the author(person, people or organization) or an URL reference, or a
+          reference in abbreviated form as per the conventions used for the addition of citation metadata.
+        </p>
+      </dd>
+      <dt class="definition">
+        <code>&lt;datalist&gt;</code>
+      </dt>
+      <dd>
+        <p>
+          The datalist element<code>&lt;datalist&gt;</code> represents a set of option elements that represent
+          predefined options for other controls
+        </p>
+      </dd>
       <dt class="definition">
         <code>&lt;code&gt;</code>
       </dt>
@@ -122,7 +178,9 @@
       </dt>
       <dd>
         <p>
-          The dfn element (<code>&lt;dfn&gt;</code>)represents the defining instance of a term. The paragraph, description list group, or section that is the nearest ancestor of the dfn element must also contain the definition(s) for the term given by the dfn element.
+          The dfn element (<code>&lt;dfn&gt;</code>)represents the defining instance of a term. The paragraph,
+          description list group, or section that is the nearest ancestor of the dfn element must also contain the
+          definition(s) for the term given by the dfn element.
         </p>
       </dd>
       <dt class="definition">
@@ -182,12 +240,21 @@
           context, a section is a thematic grouping of content, typically with a header, possibly with a footer
         </p>
       </dd>
-                <dt>
-< <code>&lt;footer&gt;</code>
+      <dt class="definition">
+        <code>&lt;footer&gt;</code>
       </dt>
       <dd>
         <p>
           The footer element(<code>&lt;footer&gt;</code>) represents the "footer" of a document or section of a document
+        </p>
+      </dd>
+      <dt class="definition">
+        <code>&lt;form&gt;</code>
+      </dt>
+      <dd>
+        <p>
+          The form element <code>&lt;form&gt;</code> represents a collection of form-associated elements, some of which
+          can represent editable values that can be submitted to a server for processing.
         </p>
       </dd>
       <dt class="definition">
@@ -213,6 +280,15 @@
       <dd>
         <p>
           The header (<code>&lt;header&gt;</code>)represents the "header" of a document or section of a document.
+        </p>
+      </dd>
+      <dt class="definition">
+        <code>&lt;hrl&gt;</code>
+      </dt>
+      <dd>
+        <p>
+          The horizontal rule element<code>&lt;hrl&gt;</code> is used to insert a horizontal rule or a thematic break in
+          an HTML page to divide or separate document sections.
         </p>
       </dd>
       <dt class="definition">
@@ -243,7 +319,8 @@
         <code>&lt;input&gt;</code>
       <dd>
         <p>
-          The code element(<code>&lt;input&gt;</code>) represents a fragment of computer code. This could be an XML element name, a file name, a computer program, or any other string that a computer would recognize
+          The code element(<code>&lt;input&gt;</code>) represents a fragment of computer code. This could be an XML
+          element name, a file name, a computer program, or any other string that a computer would recognize
         </P>
       </dd>
       <dt class="definition">
@@ -257,7 +334,8 @@
         <code>&lt;kbd&gt;</code>
       <dd>
         <p>
-         The keybord element (<code>&lt;kbd&gt;</code>)seems to be presentational by making the marked-up word look like keybord key.
+          The keybord element (<code>&lt;kbd&gt;</code>)seems to be presentational by making the marked-up word look
+          like keybord key.
         </P>
       </dd>
       <dt class="definition">
@@ -290,8 +368,19 @@
       <dt>
       <dd>
         <p>
-          The mark element (<code>&lt;mark&gt;</code>)represents a run of text in one document marked or highlighted for reference purposes
-           (highlights a word or phrase that matchies a given ternm ,or pays special attention.)
+          The mark element (<code>&lt;mark&gt;</code>)represents a run of text in one document marked or highlighted for
+          reference purposes
+          (highlights a word or phrase that matchies a given ternm ,or pays special attention.)
+        </p>
+      </dd>
+      <dt class="definition">
+        <code>&lt;meter&gt;</code>
+      <dt>
+      <dd>
+        <p>
+          The meter element<code>&lt;meter&gt;</code> represents a scalar measurement within a known range, or a
+          fractional value; for example disk usage, the relevance of a query result, or the fraction of a voting
+          population to have selected a particular candidate.
         </p>
       </dd>
       <dt class="definition">
@@ -308,8 +397,9 @@
       <dt>
       <dd>
         <p>
-          The Preformatted element(<code>&lt;pre&gt;</code>)  represents a block of preformatted text, in which structure is represented by typographic conventions rather than by elements.
-        (preserves whitespace ,keep the spacing tabs and newlines of its content )
+          The Preformatted element(<code>&lt;pre&gt;</code>) represents a block of preformatted text, in which structure
+          is represented by typographic conventions rather than by elements.
+          (preserves whitespace ,keep the spacing tabs and newlines of its content )
         </p>
       </dd>
       <dt class="definition">
@@ -317,7 +407,8 @@
       <dt>
       <dd>
         <p>
-          The quoted element(<code>&lt;q&gt;</code>) represents some phrasing content quoted from another source.(inlines quotes,no quot marks requierd)       </p>
+          The quoted element(<code>&lt;q&gt;</code>) represents some phrasing content quoted from another
+          source.(inlines quotes,no quot marks requierd) </p>
       </dd>
       <dt class="definition">
         <code>&lt;ol&gt;</code>
@@ -350,8 +441,9 @@
       </dt>
       <dd>
         <p>
-          The sample element(<code>&lt;samp&gt;</code>) represents sample or quoted output from another program or computing system.
-        (used to show sample output from a computer program.)
+          The sample element(<code>&lt;samp&gt;</code>) represents sample or quoted output from another program or
+          computing system.
+          (used to show sample output from a computer program.)
         </p>
       </dd>
       <dt class="definition">
@@ -369,31 +461,35 @@
       <dd>
         <p>
           The small element (<code>&lt;smallgt;</code>)represents side comments such as small print.
-        (footnotes ,or other pecies of text)
-          </p>
+          (footnotes ,or other pecies of text)
+        </p>
       </dd>
       <dt class="definition">
         <code>&lt;span&gt;</code>
       </dt>
       <dd>
         <p>
-          The span element(<code>&lt;spangt;</code>) doesn't mean anything on its own, but can be useful when used together with the global attributes.
-          </p>
+          The span element(<code>&lt;spangt;</code>) doesn't mean anything on its own, but can be useful when used
+          together with the global attributes.
+        </p>
       </dd>
       <dt class="definition">
         <code>&lt;strong&gt;</code>
       </dt>
       <dd>
         <p>
-          The strong element(<code>&lt;stronggt;</code>) represents strong importance, seriousness, or urgency for its contents.
-          </p>
+          The strong element(<code>&lt;stronggt;</code>) represents strong importance, seriousness, or urgency for its
+          contents.
+        </p>
       </dd>
       <dt class="definition">
         <code>&lt;sub&gt;</code>
       </dt>
       <dd>
         <p>
-          The subscript element(<code>&lt;subgt;</code>) defines subscript text. Subscript text appears half a character below the normal line, and is sometimes rendered in a smaller font. Subscript text can be used for chemical formulas, like H2O.
+          The subscript element(<code>&lt;subgt;</code>) defines subscript text. Subscript text appears half a character
+          below the normal line, and is sometimes rendered in a smaller font. Subscript text can be used for chemical
+          formulas, like H2O.
         </p>
       </dd>
       <dt class="definition">
@@ -401,7 +497,9 @@
       </dt>
       <dd>
         <p>
-          The superscript elements(<code>&lt;supgt;</code>) defines superscript text. Superscript text appears half a character above the normal line, and is sometimes rendered in a smaller font. Superscript text can be used for footnotes, like WWW[1].
+          The superscript elements(<code>&lt;supgt;</code>) defines superscript text. Superscript text appears half a
+          character above the normal line, and is sometimes rendered in a smaller font. Superscript text can be used for
+          footnotes, like WWW[1].
         </p>
       </dd>
       <dt class="definition">
@@ -469,7 +567,8 @@
       </dt>
       <dd>
         <p>
-          The time element (<code>&lt;time&gt;</code>)represents its contents, along with a machine-readable form of those contents in the datetime attribute.
+          The time element (<code>&lt;time&gt;</code>)represents its contents, along with a machine-readable form of
+          those contents in the datetime attribute.
         </p>
       </dd>
       <dt class="definition">
@@ -490,7 +589,8 @@
       </dt>
       <dd>
         <p>
-          The u element(<code>&lt;u&gt;</code>) represents a span of text with an unarticulated, though explicitly rendered, non-textual annotation.
+          The u element(<code>&lt;u&gt;</code>) represents a span of text with an unarticulated, though explicitly
+          rendered, non-textual annotation.
         </p>
       </dd>
       <dt class="definition">
@@ -508,7 +608,17 @@
       </dt>
       <dd>
         <p>
-          The variable element(<code>&lt;var&gt;</code>) represents a variable. This could be an actual variable in a mathematical expression or programming context, an identifier representing a constant, a symbol identifying a physical quantity, a function parameter, or just be a term used as a placeholder in prose
+          The variable element(<code>&lt;var&gt;</code>) represents a variable. This could be an actual variable in a
+          mathematical expression or programming context, an identifier representing a constant, a symbol identifying a
+          physical quantity, a function parameter, or just be a term used as a placeholder in prose
+        </p>
+      </dd>
+      <dt class="definition">
+        <code>&lt;video&gt;</code>
+      </dt>
+      <dd>
+        <p>
+          A video element<code>&lt;video&gt;</code> is used for playing videos or movies, and audio files with captions.
         </p>
       </dd>
     </dl>
